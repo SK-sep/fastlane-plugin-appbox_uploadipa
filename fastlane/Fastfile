@@ -1,0 +1,13 @@
+default_platform(:ios)
+
+platform :ios do
+  lane :appbox_ipaupload do
+    appbox_uploadipa(
+      path: '/Users/eskaseptian/Documents/Application.ipa'
+    )
+    appbox(
+        emails: 'youremail@gmail.com',
+        keep_same_link: true,
+    )
+  end
+end
